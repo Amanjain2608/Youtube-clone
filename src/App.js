@@ -9,8 +9,8 @@ import { AppContext } from "./Context/contextApi";
 
 const App = () => {
   return (
-   
-        <div className="flex flex-col h-full">
+ 
+    <div className="flex flex-col h-full">
           <Header />
           <Routes>
             <Route path="/" exact element={<Feed />} />

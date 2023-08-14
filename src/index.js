@@ -4,12 +4,16 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+import { AppContext } from "./Context/contextApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+    <AppContext>
+    <App />
+    </AppContext>
     </BrowserRouter>
+   
   </React.StrictMode>
 );

@@ -32,8 +32,9 @@ code {
     content: "";
     display: inline;
     position: absolute;
+    top:0;
     width: 0;
-    height: 100%;
+    height: 5%;
     left: 50%;
     text-align: center;
 }

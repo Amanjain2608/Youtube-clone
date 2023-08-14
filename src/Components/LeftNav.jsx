@@ -8,6 +8,8 @@ import { Context } from "../Context/contextApi";
 const LeftNav = () => {
   const { selectCategories, setSelectCategories, mobileMenu } = useContext(Context);
 
+  const navigate = useNavigate();
+
 const clickHandler = (name, type)=>{
   switch(type) {
     case "category":
@@ -28,12 +30,13 @@ const clickHandler = (name, type)=>{
       <div className="flex px-5 flex-col">
         {categories.map((item) => {
           return (
-            <React.Fragment>
+            <React.Fragment key={item.name}>
               <LeftNavMenuItem
                 text={item.type === "home" ? "Home" : item.name}
                 icon={item.icon}
                 action={() => {
-                  clickHandler(item.name, item.type)
+                  clickHandler(item.name, item.type);
+                  navigate("/");
                 }}
                 className={`${
                   selectCategories === item.name ? "bg-white/[0.15]" : ""
