@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import { Context } from "../Context/contextApi";
 import LeftNav from "./LeftNav";
-import videoCard from "./VideoCard";
+import VideoCard from "./VideoCard";
 
 const Feed = () => {
   const {loading, searchResults} = useContext(Context);
@@ -11,8 +11,8 @@ const Feed = () => {
     document.getElementById("root").classList.remove("custom-h");
   },[]);
 
-  console.log(typeof(searchResults))
-  console.log(searchResults)
+  // console.log(typeof(searchResults))
+  // console.log(searchResults)
 
   return (
     <div className="flex flex-row h-[calc(100%-44px)]">
@@ -23,7 +23,7 @@ const Feed = () => {
             searchResults.map((item) => {
               if(item.type !=="video") return " ";
               return (
-                <videoCard key={item?.video?.videoId} video={item?.video} />
+                <VideoCard key={item?.video?.videoId} video={item?.video} />
               );
             })}
         </div>
