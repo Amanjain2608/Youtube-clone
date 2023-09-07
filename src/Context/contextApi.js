@@ -47,3 +47,5 @@ export const Context = createContext(initialState);
         </Context.Provider>
      )
 }
+
+// export default Context;
